@@ -12,7 +12,7 @@
 ## Job options
 RNDSEED=$(( SLURM_ARRAY_TASK_ID+1 ))
 PRODNUM=20200620
-NEVENTS=1
+NEVENTS=10
 STARTID=$(( SLURM_ARRAY_TASK_ID*NEVENTS ))
 OUTFILE="/n/holyscratch01/guenette_lab/jmartinalbo/flex.e-_roi.${SLURM_ARRAY_TASK_ID}.nexus"
 

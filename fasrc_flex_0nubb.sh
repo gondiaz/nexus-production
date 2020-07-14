@@ -14,7 +14,7 @@ RNDSEED=$(( SLURM_ARRAY_TASK_ID+1 ))
 PRODNUM=20200624
 NEVENTS=10
 STARTID=$(( SLURM_ARRAY_TASK_ID*NEVENTS ))
-OUTFILE="/n/holyscratch01/guenette_lab/jmartinalbo/flex.e-_roi.${SLURM_ARRAY_TASK_ID}.nexus"
+OUTFILE="/n/holyscratch01/guenette_lab/jmartinalbo/flex.0nubb.${SLURM_ARRAY_TASK_ID}.nexus"
 
 ## Configure scisoft software products
 . /n/holystore01/LABS/guenette_lab/Lab/software/next/scisoft/setup
@@ -33,7 +33,7 @@ echo "/PhysicsList/RegisterPhysics G4OpticalPhysics"            >> ${INI_MACRO}
 echo "/PhysicsList/RegisterPhysics NexusPhysics"                >> ${INI_MACRO}
 echo "/PhysicsList/RegisterPhysics G4StepLimiterPhysics"        >> ${INI_MACRO}
 echo "/Geometry/RegisterGeometry      NEXT_FLEX"                >> ${INI_MACRO}
-echo "/Generator/RegisterGenerator    SINGLE_PARTICLE"          >> ${INI_MACRO}
+echo "/Generator/RegisterGenerator    DECAY0"                   >> ${INI_MACRO}
 echo "/Actions/RegisterRunAction      DEFAULT"                  >> ${INI_MACRO}
 echo "/Actions/RegisterEventAction    DEFAULT"                  >> ${INI_MACRO}
 echo "/Actions/RegisterTrackingAction DEFAULT"                  >> ${INI_MACRO}
