@@ -11,7 +11,7 @@
 
 ## Job options
 RNDSEED=${SLURM_ARRAY_TASK_ID}
-PRODNUM=20200529
+PRODNUM=20200722
 NEVENTS=1000
 STARTID=$(((RNDSEED-1)*NEVENTS))
 OUTFILE="/n/holyscratch01/guenette_lab/jmartinalbo/next100.kr83m.${SLURM_ARRAY_TASK_ID}.nexus"
@@ -47,8 +47,8 @@ echo "/Generator/Kr83mGenerator/region ACTIVE"                  >> ${CFG_MACRO}
 echo "/Geometry/Next100/pressure 15.0 bar"                      >> ${CFG_MACRO}
 echo "/Geometry/Next100/sc_yield 25510. 1/MeV"                  >> ${CFG_MACRO}
 echo "/Geometry/Next100/EL_field 16. kilovolt/cm"               >> ${CFG_MACRO}
-echo "/Geometry/Next100/drift_transv_diff 1.2 mm/sqrt(cm)"      >> ${CFG_MACRO}
-echo "/Geometry/Next100/drift_long_diff   0.3 mm/sqrt(cm)"      >> ${CFG_MACRO}
+echo "/Geometry/Next100/drift_transv_diff 1.0 mm/sqrt(cm)"      >> ${CFG_MACRO}
+echo "/Geometry/Next100/drift_long_diff   0.2 mm/sqrt(cm)"      >> ${CFG_MACRO}
 echo "/Geometry/Next100/e_lifetime 12.0 ms"                     >> ${CFG_MACRO}
 echo "/Geometry/Next100/elfield true"                           >> ${CFG_MACRO}
 echo "/Geometry/Next100/max_step_size 1. mm"                    >> ${CFG_MACRO}
